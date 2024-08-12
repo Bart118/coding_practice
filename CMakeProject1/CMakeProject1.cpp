@@ -12,6 +12,8 @@ int main()
 	std::string my_text;
 	int num_arry[50] = {};
 	std::string fileName = "script_data.txt";
+	int LineCount = count_lines(fileName);
+	std::cout << "there are: " << LineCount << " lines" << std::endl;
 	std::ifstream MyReadFile(fileName);
 	int i = 0;
 	bool end_early = false;  //decides if while loop should end early
