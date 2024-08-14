@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeProject1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeProject1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\file_func.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:file_func.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\file_func.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:file_func.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeProject1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CMakeProject1.h",
               "DocumentMoniker": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.h",
               "RelativeDocumentMoniker": "CMakeProject1.h",
@@ -51,27 +51,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "file_func.h",
               "DocumentMoniker": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\file_func.h",
               "RelativeDocumentMoniker": "file_func.h",
               "ToolTip": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\file_func.h",
               "RelativeToolTip": "file_func.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-12T17:11:35.479Z"
+              "WhenOpened": "2024-08-12T17:11:35.479Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "file_func.cpp",
               "DocumentMoniker": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\file_func.cpp",
               "RelativeDocumentMoniker": "file_func.cpp",
               "ToolTip": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\file_func.cpp",
               "RelativeToolTip": "file_func.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAmwCEAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-12T17:11:22.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CMakeProject1.cpp",
+              "DocumentMoniker": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.cpp",
+              "RelativeDocumentMoniker": "CMakeProject1.cpp",
+              "ToolTip": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.cpp",
+              "RelativeToolTip": "CMakeProject1.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-30T17:25:21.686Z",
               "EditorCaption": ""
             },
             {
@@ -85,19 +99,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-07-30T17:25:31.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CMakeProject1.cpp",
-              "DocumentMoniker": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.cpp",
-              "RelativeDocumentMoniker": "CMakeProject1.cpp",
-              "ToolTip": "C:\\Users\\sbart\\Documents\\coding_practice\\CMakeProject1\\CMakeProject1.cpp",
-              "RelativeToolTip": "CMakeProject1.cpp",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAmwBoAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-30T17:25:21.686Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -3,5 +3,14 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <vector>
 
+//reads the file whose name is passed into the function and determines how many lines it has
+//returns the number of lines as an integer
 int count_lines(std::string fileName);
+
+//reads each line of the passed file and copies it into a vector
+//the vector is returned by the function
+//the starting position can be changed by the second parameter
+//the number of lines to be read can be limited by the third parameter
+std::vector<int> copy_data(std::string fileName, int start, int limit);
