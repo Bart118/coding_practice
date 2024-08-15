@@ -38,3 +38,23 @@ std::vector<int> copy_data(std::string fileName, int start, int limit) {
 	std::cout << "finished copying" << std::endl;
 	return num_arry;
 }
+
+int write_result(std::vector<int> data, int start, int end) {
+	std::cout << "writing data..." << std::endl;
+	int result = 0;
+	std::string fileName = "results.txt";
+	std::ofstream myFile(fileName);
+
+	if (myFile.is_open()) {
+		for (int i = start; i < end; i++) {
+			myFile << std::to_string(data[i]) << std::endl;
+		}
+		result = 1;
+		myFile.close();
+	}
+	else {
+		result = 0;
+	}
+
+	return result;
+}
