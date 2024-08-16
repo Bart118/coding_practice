@@ -22,6 +22,13 @@ try:
 except:
     print("Something went wrong")
 
+#read the results
+result_file = open("results.txt")
+results = result_file.readlines()
+print(len(results))
+for line in results:
+    print(line)
+result_file.close()
 
 #2nd attempt, use more than 50 lines
 print("creating a text file to pass parameters to executable")
@@ -40,5 +47,13 @@ try:
     print("Program is finished")
 except:
     print("Something went wrong")
-    
+
+#read the results
+result_file = open("results.txt")
+results = result_file.readlines()
+print(len(results))
+for line in results:
+    print(line)
+result_file.close()
+
 input("\n\nPress enter to close.")
