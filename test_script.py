@@ -4,16 +4,24 @@
 import os
 import random
 
+def write_data(data_count):
+    print("Writing to file...")
+    text_file = open("script_data.txt", "w")
+    number_data = random.randint(1,1000)
+    for i in range(data_count):
+        text_file.write(str(number_data))
+        text_file.write("\n")
+        number_data = random.randint(1,1000)
+    text_file.close()
+
+def read_data():
+    print("Reading file...")
+    result_file = open("results.txt")
+    results = result_file.readlines()
+    return results
+    
 #first attempt, use less than 50 lines of data
-print("creating a text file to pass parameters to executable")
-text_file = open("script_data.txt", "w")
-data_count = 10  #lines of data to put in text file
-number_data = random.randint(1,1000)
-for i in range(data_count):
-    text_file.write(str(number_data))
-    text_file.write("\n")
-    number_data = random.randint(1,1000)
-text_file.close()
+write_data(10)
 
 try:
     print("Running the program")
@@ -23,23 +31,10 @@ except:
     print("Something went wrong")
 
 #read the results
-result_file = open("results.txt")
-results = result_file.readlines()
-print(len(results))
-for line in results:
-    print(line)
-result_file.close()
+results1 = read_data()
 
-#2nd attempt, use more than 50 lines
-print("creating a text file to pass parameters to executable")
-text_file = open("script_data.txt", "w")
-data_count = 60
-number_data = random.randint(1,1000)
-for i in range(data_count):
-    text_file.write(str(number_data))
-    text_file.write("\n")
-    number_data = random.randint(1,1000)
-text_file.close()
+#2nd attempt, using more lines
+write_data(100)
 
 try:
     print("Running the program")
@@ -49,11 +44,6 @@ except:
     print("Something went wrong")
 
 #read the results
-result_file = open("results.txt")
-results = result_file.readlines()
-print(len(results))
-for line in results:
-    print(line)
-result_file.close()
+results2 = read_data()
 
 input("\n\nPress enter to close.")
