@@ -28,49 +28,58 @@ def check_result(option, amount):
     end_data_int = [int(s) for s in end_data]
     answers = [0,0]
     if (option == 1):
+        print("Data should be equal")
         #checks if both files are equal
         if (len(start_data) == len(end_data)):
-            for i in start_data:
-                print(type(i))
-                if(start_data_int[int(i)] == end_data_int[int(i)]):
+            j = 0
+            for i in start_data_int:
+                print(j)
+                if(start_data_int[j] == end_data_int[j]):
                     answers[0] += 1
                 else:
                     answers[1] +=1
                     print("Point ", i, "is wrong")
-                    print("start: ", start_data[i])
-                    print("end: ", end_data[i])
+                    print("start: ", start_data[j])
+                    print("end: ", end_data[j])
+                j += 1
             print("Correct Answers: ", answers[0])
             print("Wrong Answers: ", answers[1])
         else:
             print("Error, file sizes don't match")
     elif (option == 2):
         #checks if result is greater than start by a specified amount
+        print("Result should be greater than the start")
+        j = 0
         if (len(start_data) == len(end_data)):
             for i in start_data:
-                compare = end_data_int[i] + amount
-                if (start_data_int[i] <= compare):
+                compare = end_data_int[j] + amount
+                if (start_data_int[j] >= compare):
                     answers[0] += 1
                 else:
                     answers[1] += 1
-                    print("Point ", i, "is wrong")
-                    print("start: ", start_data[i])
-                    print("end: ", end_data[i])
+                    print("Point", j, "is wrong")
+                    print("start:", start_data[j], "end:", end_data[j])
+                    #print("end: ", end_data[j])
+                j += 1
             print("Correct Answers: ", answers[0])
             print("Wrong Answers: ", answers[1])
         else:
             print("Error, file sizes don't match")
     elif (option == 3):
         #checks if result is less than start by a specified amount
+        print("Result should be less than the start")
         if (len(start_data) == len(end_data)):
+            j = 0
             for i in start_data:
-                compare = end_data_int[i] - amount
-                if (start_data_int[i] >= compare):
+                compare = end_data_int[j] - amount
+                if (start_data_int[j] <= compare):
                     answers[0] += 1
                 else:
                     answers[1] += 1
-                    print("Point ", i, "is wrong")
-                    print("start: ", start_data[i])
-                    print("end: ", end_data[i])
+                    print("Point ", j, "is wrong")
+                    print("start: ", start_data[j])
+                    print("end: ", end_data[j])
+                j += 1
             print("Correct Answers: ", answers[0])
             print("Wrong Answers: ", answers[1])
         else:
