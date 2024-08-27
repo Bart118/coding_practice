@@ -1,9 +1,9 @@
 #python script to run an executable written in c++
-#last updated on: 7/31/24
+#last updated on: 8/27/24
 
 import os
 import random
-from file_funcs import write_data, read_data
+from file_funcs import write_rand, write_spec, read_data
 
 def check_result(option, amount):
     print("Checking results...")
@@ -74,7 +74,8 @@ def check_result(option, amount):
     
     
 #first attempt, results should be equal
-write_data(10)
+print("First test")
+write_rand(10, "script_data.txt")
 
 try:
     print("Running the program")
@@ -87,7 +88,8 @@ except:
 check_result(1, 0)
 
 #2nd attempt, results should be greater than start by 5
-write_data(10)
+print("Second test")
+write_rand(10, "script_data.txt")
 
 try:
     print("Running the program")
@@ -98,5 +100,18 @@ except:
 
 #checking the results
 check_result(2,5)
+
+print("Third Test")
+write_spec("script_data.txt")
+
+try:
+    print("Running the program")
+    os.system("C:/Users/sbart/Documents/coding_practice/CMakeProject1/out/build/x64-debug/CMakeProject1.exe")
+    print("Program is finished")
+except:
+    print("Something went wrong")
+
+#checking the results
+check_result(1, 0)
 
 input("\n\nPress enter to close.")
