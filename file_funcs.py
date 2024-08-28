@@ -1,17 +1,15 @@
 #functions for file operations
-import random
 
-#writes the specified number of random integers between 1 and 1000
-def write_rand(data_count, file):
-    print("Writing to file...")
+#writes a list to a file
+def write_list(file, data):
+    print("writing the list to a file...")
     text_file = open(file, "w")
-    number_data = random.randint(1,1000)
-    for i in range(data_count):
-        text_file.write(str(number_data))
+    for line in data:
+        text_file.write(str(line))
         text_file.write("\n")
-        number_data = random.randint(1,1000)
     text_file.close()
-
+    print("finished writing")
+    
 #writes user input to a file
 def write_spec(file):
     print("writing to file...")

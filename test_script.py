@@ -3,13 +3,22 @@
 
 import os
 import random
-from file_funcs import write_rand, write_spec, read_data
+from file_funcs import write_list, write_spec, read_data
+
+def rand_list(amount, lower, upper):
+    data = []
+    for i in range(amount):
+        data.append(random.randint(lower, upper))
+    print(data)
+    return data
 
 def check_result(option, amount):
     print("Checking results...")
     start_data = read_data("script_data.txt")
+    #add in error handling
     start_data_int = [int(s) for s in start_data]
     end_data = read_data("results.txt")
+    #add in error handling
     end_data_int = [int(s) for s in end_data]
     answers = [0,0]
     if (option == 1):
@@ -18,7 +27,6 @@ def check_result(option, amount):
         if (len(start_data) == len(end_data)):
             j = 0
             for i in start_data_int:
-                print(j)
                 if(start_data_int[j] == end_data_int[j]):
                     answers[0] += 1
                 else:
@@ -74,8 +82,10 @@ def check_result(option, amount):
     
     
 #first attempt, results should be equal
+data_file = "script_data.txt"
 print("First test")
-write_rand(10, "script_data.txt")
+data = rand_list(10, 1, 20)
+write_list(data_file, data)
 
 try:
     print("Running the program")
@@ -89,7 +99,8 @@ check_result(1, 0)
 
 #2nd attempt, results should be greater than start by 5
 print("Second test")
-write_rand(10, "script_data.txt")
+data = rand_list(20, 1, 5)
+write_list(data_file, data)
 
 try:
     print("Running the program")
