@@ -9,83 +9,54 @@ def rand_list(amount, lower, upper):
     data = []
     for i in range(amount):
         data.append(random.randint(lower, upper))
-    print(data)
+    print("True data:", data)
     return data
 
-def check_result(option, amount):
+#modifies each point of "true" data by adding or subtracting a random number
+#the severity variable controls how large the random number can be
+def create_data(severity):
+    print("modifying data...")
+    test_data = []
+    true_data = read_data("true_data.txt")
+    t_data_int = [int(s) for s in true_data]
+    for i in t_data_int:
+        pm = random.randint(1,2)
+        if(pm < 2):
+            test_data.append(i + random.randint(1, severity))
+        else:
+            test_data.append(i - random.randint(1, severity))
+    print("New data:", test_data)
+    write_list("script_data.txt", test_data)
+    
+
+def check_result():
     print("Checking results...")
-    start_data = read_data("script_data.txt")
-    #add in error handling
-    start_data_int = [int(s) for s in start_data]
-    end_data = read_data("results.txt")
-    #add in error handling
-    end_data_int = [int(s) for s in end_data]
-    answers = [0,0]
-    if (option == 1):
-        print("Data should be equal")
-        #checks if both files are equal
-        if (len(start_data) == len(end_data)):
-            j = 0
-            for i in start_data_int:
-                if(start_data_int[j] == end_data_int[j]):
-                    answers[0] += 1
-                else:
-                    answers[1] +=1
-                    print("Point ", i, "is wrong")
-                    print("start: ", start_data[j])
-                    print("end: ", end_data[j])
-                j += 1
-            print("Correct Answers: ", answers[0])
-            print("Wrong Answers: ", answers[1])
+    correct = 0
+    wrong = 0
+    t_data = read_data("true_data.txt")
+    e_data = read_data("results.txt")
+    t_data_int = [int(s) for s in t_data]
+    e_data_int= [int(s) for s in e_data]
+    print("true data:", t_data_int)
+    print("results:", e_data_int)
+    for i in range(len(t_data_int)):
+        if (t_data_int[i] == e_data_int[i]):
+            correct += 1
         else:
-            print("Error, file sizes don't match")
-    elif (option == 2):
-        #checks if result is greater than start by a specified amount
-        print("Result should be greater than the start")
-        j = 0
-        if (len(start_data) == len(end_data)):
-            for i in start_data:
-                compare = end_data_int[j] + amount
-                if (start_data_int[j] >= compare):
-                    answers[0] += 1
-                else:
-                    answers[1] += 1
-                    print("Point", j, "is wrong")
-                    print("start:", start_data[j], "end:", end_data[j])
-                    #print("end: ", end_data[j])
-                j += 1
-            print("Correct Answers: ", answers[0])
-            print("Wrong Answers: ", answers[1])
-        else:
-            print("Error, file sizes don't match")
-    elif (option == 3):
-        #checks if result is less than start by a specified amount
-        print("Result should be less than the start")
-        if (len(start_data) == len(end_data)):
-            j = 0
-            for i in start_data:
-                compare = end_data_int[j] - amount
-                if (start_data_int[j] <= compare):
-                    answers[0] += 1
-                else:
-                    answers[1] += 1
-                    print("Point ", j, "is wrong")
-                    print("start: ", start_data[j])
-                    print("end: ", end_data[j])
-                j += 1
-            print("Correct Answers: ", answers[0])
-            print("Wrong Answers: ", answers[1])
-        else:
-            print("Error, file sizes don't match")
-    else:
-        print("Invalid option")
+            wrong += 1
+    print("correct:", correct, "incorrect:", wrong)
     
     
 #first attempt, results should be equal
-data_file = "script_data.txt"
+data_file = "true_data.txt"
+data_count = 10
+lower_limit = 1
+upper_limit = 20
+severity = 5
 print("First test")
-data = rand_list(10, 1, 20)
+data = rand_list(data_count, lower_limit, upper_limit)
 write_list(data_file, data)
+create_data(severity)
 
 try:
     print("Running the program")
@@ -95,12 +66,14 @@ except:
     print("Something went wrong")
 
 #checking the results
-check_result(1, 0)
+check_result()
 
 #2nd attempt, results should be greater than start by 5
 print("Second test")
-data = rand_list(20, 1, 5)
+severity = 10
+data = rand_list(data_count, lower_limit, upper_limit)
 write_list(data_file, data)
+create_data(severity)
 
 try:
     print("Running the program")
@@ -110,19 +83,6 @@ except:
     print("Something went wrong")
 
 #checking the results
-check_result(2,5)
-
-print("Third Test")
-write_spec("script_data.txt")
-
-try:
-    print("Running the program")
-    os.system("C:/Users/sbart/Documents/coding_practice/CMakeProject1/out/build/x64-debug/CMakeProject1.exe")
-    print("Program is finished")
-except:
-    print("Something went wrong")
-
-#checking the results
-check_result(1, 0)
+check_result()
 
 input("\n\nPress enter to close.")

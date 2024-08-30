@@ -28,8 +28,5 @@ int main()
 			std::cout << num_arry[j] << std::endl;
 	}
 
-	//waits for a user input to close the program
-	std::cout << "Enter a character to exit" << std::endl;
-	std::cin >> exit_ans;
 	return 0;
 }
