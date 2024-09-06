@@ -3,8 +3,8 @@
 #include <iostream>
 #include <cmath>
 
-float ave(std::vector<int>);
+float ave(std::vector<float>);
 
-float std_dev(std::vector<int>);
+float std_dev(std::vector<float>);
 
-std::vector<int> filter(std::vector<int>, float);
+std::vector<float> filter(std::vector<float>);

@@ -13,9 +13,9 @@ int count_lines(std::string fileName);
 //the vector is returned by the function
 //the starting position can be changed by the second parameter
 //the number of lines to be read can be limited by the third parameter
-std::vector<int> copy_data(std::string fileName, int start, int limit);
+std::vector<float> copy_data(std::string fileName, int start, int limit);
 
 //writes the results of the program to a new text file
 //returns an integer to let the main program know if it succeeded
 //start and end control the endpoints of the vector to be copied
-int write_result(std::vector<int> data, int start, int end);
+int write_result(std::vector<float> data, int start, int end);

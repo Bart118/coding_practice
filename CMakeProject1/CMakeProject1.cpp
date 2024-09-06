@@ -11,7 +11,7 @@ int main()
 	//reading from a text file and printing the results to the screen
 	std::string fileName = "script_data.txt";
 	int LineCount = count_lines(fileName);
-	std::vector<int> num_arry(LineCount);
+	std::vector<float> num_arry(LineCount);
 	std::cout << "there are: " << LineCount << " lines" << std::endl;
 	num_arry = copy_data(fileName, 0, LineCount);
 

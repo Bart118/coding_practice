@@ -1,9 +1,6 @@
 # ninja log v5
-36	69	0	clean	8c45b54705a541e8
-59	2572	7471750905199985	CMakeFiles/CMakeProject1.dir/file_func.cpp.obj	9fa707ee0285cbeb
-39	2585	7471750905356212	CMakeFiles/CMakeProject1.dir/CMakeProject1.cpp.obj	65c1477ef0f67cfc
 70	110	0	clean	8c45b54705a541e8
-35	2127	7471751476058424	CMakeFiles/CMakeProject1.dir/CMakeProject1.cpp.obj	65c1477ef0f67cfc
 51	2135	7471751476214720	CMakeFiles/CMakeProject1.dir/file_func.cpp.obj	9fa707ee0285cbeb
+35	2127	7471751476058424	CMakeFiles/CMakeProject1.dir/CMakeProject1.cpp.obj	65c1477ef0f67cfc
 68	2140	7471751476214720	CMakeFiles/CMakeProject1.dir/kalman.cpp.obj	f61ec180f0b862ab
 2141	3211	7471751486363889	CMakeProject1.exe	38f15ca07a8cfff7
